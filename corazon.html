@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATTE_REYNALDO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+     button{
+        border: 0;
+        border-radius: 8px;
+        color: rgb(255, 0, 0);
+    }
+    #img {
+        display: none;
+    }
+    #vid {
+        display: none;
+    }
+    #men {
+        display: none;
+    }
+    i{
+        color: antiquewhite;
+    }
+    body{
+           margin:0;
+           padding: 0;
+           min-height: 100vh;display: block;
+           display: flex ;
+           align-items: center;
+           justify-content: center;
+           background: #0b1522;
+         }
+        .heart {
+            height: 150px;
+            width: 150px;
+            background-color:rgb(255, 0, 0);
+            position: relative;
+            transform: rotate(45deg);
+            box-shadow: -20px 20px 150px #ff0000;
+            animation: palpitar 0.5s linear infinite alternate;
+        }
+        .contenido
+        {
+            position: fixed;
+            margin-bottom: 220px;
+            text-align: center;
+        }
+        h1{color:white}
+        .contenido
+        {
+            position: fixed;
+            margin-bottom: 300px;
+            text-align: center;
+        }
+        h2{color:black}
+        @keyframes palpitar
+        {
+            0% {transform: rotate(45deg) scale(1.10);}
+            80% {transform: rotate(45deg) scale(1.0);}
+            100% {transform: rotate(45deg) scale(0.8);}
+        }
+        .heart::before {
+            content: "";
+            position: absolute;
+            height: 150px;
+            width: 150px;
+            background: red;
+            right: 50% ;
+            border-radius: 50%;
+            box-shadow: 20px 20px 150px #ff0000;
+        }
+        .heart::after {
+            content: "";
+            position: absolute;
+            height: 150px;
+            width: 150px;
+            background: red;
+            top:  -50% ;
+            border-radius: 50%;
+            box-shadow: 20px 20px 150px #ff0000;
+        }
+        
+</style>
+
+<body>
+    <div class = "heart"></div>
+    <div class="contenido"><h1 style="font-size: 30px;color: bisque;"><br><br><br><br><br><br><br><br>CON MUCHO CARIÑO <br> PARA TI</h1>                  
+                           <h2 style="font-size: 40px;color: bisque;"><br> LEYDI..</h2>
+                           <br><br><br><br><br><br>
+                           <h1 style="font-size: 30px;color: bisque;">MI HERMOSA SALAQUERITA</h1>
+                           <button id="boton" onclick="ocultar();"><span>Pant.Prin</span></button>
+                           <button id="boton" onclick="mostrar2();">UN VIDEO CON TIGO</button>
+                           <div id="vid" >
+                                <video src="video1.mp4" controls width="200px"></video>
+                           </div>
+                           <button id="boton" onclick="mostrar1();">UNA FOTO CON TIGO</button>
+                           <div id="img" >
+                            
+                                <img src="imagen1.jpg" width="200px" alt="TU Y YO JUNTOS">
+                           </div>
+                           <div id="men">
+                               <br>  <i>SOLO A TU LADO SOY FELIZ</i>
+                           </div>
+                    <script>
+                            function mostrar1(){
+                                document.getElementById("img").style.display = 'block';
+                                document.getElementById("vid").style.display = 'none';
+                                document.getElementById("men").style.display = 'none';
+                            }
+                            function mostrar2(){
+                                document.getElementById("vid").style.display = 'block';
+                                document.getElementById("img").style.display = 'none';
+                                document.getElementById("men").style.display = 'none';
+                            }
+                            function ocultar(){
+                                document.getElementById("img").style.display = 'none';
+                                document.getElementById("vid").style.display = 'none';
+                                document.getElementById("men").style.display = 'block';
+                            }
+                    </script>
+                           
+    </div>
+    
+</body>
+</html>
